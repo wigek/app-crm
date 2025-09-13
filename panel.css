@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.crm-panel {
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    background: #f4f6fb;
+    position: relative;
+    z-index: 1;
+}
+
+.crm-sidebar {
+    width: 10vw;
+    min-width: 120px;
+    max-width: 220px;
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+    box-shadow: 2px 0 8px rgba(44,62,80,0.08);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a:focus {
+    background: #34495e;
+}
+
+.crm-content {
+    margin-left: 10vw;
+    padding: 2.5rem 3rem;
+    flex: 1;
+    min-width: 0;
+    background: #f4f6fb;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.crm-content h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.crm-content p {
+    color: #555;
+    font-size: 1.1rem;
+}
