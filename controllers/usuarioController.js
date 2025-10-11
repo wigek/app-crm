@@ -1,4 +1,5 @@
 import { Usuarios } from "../models/UsuarioModel.js";
+import { guardarLocalStorage } from "../helpers/local-storage.js";
 
 export function registrarUsuario() {
     let formulario = document.getElementById("formulario");
@@ -8,8 +9,7 @@ export function registrarUsuario() {
         let usuario = Object.fromEntries(formData);
         usuario.hobbies = formData.getAll("hobbies");
         Usuarios.push(usuario);
-        localStorage.setItem("usuarios", JSON.stringify(Usuarios));
-        formulario.reset();
-        alert("Usuario registrado exitosamente");
+        guardarLocalStorage("usuarios", Usuarios);
+        console.log(Usuarios);
     });
 }
